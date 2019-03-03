@@ -56,12 +56,15 @@ sample counts.
 Finally, import the data into a [MultiAssayExperiment](http://bioconductor.org/packages/release/bioc/html/MultiAssayExperiment.html).
 
 ```
-Rscript 03_makeRDS.R processed_data
+Rscript 03_makeRDS.R processed_data mito_fastas/hg19.fasta
 ```
 
-where the first and only parameter is the directory that has the processed, combined data file from step 2. 
+where the first parameter is the directory that has the processed, combined data file from step 2, 
+and the second is a fasta file that contains the reference mtDNA sequence. We've curated several 
+useful mtDNA sequences in `exampleProcessing/mito_fastas`.
 
-The MultiAssayExperiment is the basic unit of processed data for all of our downstream analyses. One can easily
+The MultiAssayExperiment, that output from these three preprocessing steps, 
+is the basic unit of processed data for all of our downstream analyses. One can easily
 read in the RDS file from this script and perform all downstream analyses.
 
 For different ways of filtering variants from a MAE, see the `exampleVariantFiltering` folder. 
