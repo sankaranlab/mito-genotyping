@@ -11,11 +11,10 @@ import pysam
 
 bamfile = sys.argv[1] # Filepath to raw bamfile
 outpre = sys.argv[2] # Prefix / basename for raw file output
-mito_genome = sys.argv[3]
-maxBP = sys.argv[4] # Maximum length of mtDNA genome
-base_qual = float(sys.argv[5]) # Minimum base quality to be considered for pileup
-sample = sys.argv[6] # Sample name to be considered for downstream analyses
-alignment_quality = float(sys.argv[7]) # minimum alignment quality required to be considered
+maxBP = sys.argv[3] # Maximum length of mtDNA genome
+base_qual = float(sys.argv[4]) # Minimum base quality to be considered for pileup
+sample = sys.argv[5] # Sample name to be considered for downstream analyses
+alignment_quality = float(sys.argv[6]) # minimum alignment quality required to be considered
 
 # Export Functions
 def writeSparseMatrix(mid, vec):
